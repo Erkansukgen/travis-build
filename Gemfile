@@ -22,9 +22,9 @@ gem 'parallel_tests', require: false, group: %i[development test]
 gem 'pry', '>= 0.14.2', require: false, group: %i[development test]
 gem 'webmock', group: :test
 gem 'puma'
-gem 'rack', '>= 2.2.4'
+gem 'rack', '>= 2.2.18'
 gem 'rack-ssl', '~> 1.4'
-gem 'rack-test', '>= 2.1.0'
+gem 'rack-test', '>= 2.2.0'
 gem 'rake'
 gem 'rbtrace'
 gem 'rerun', require: false, group: :development
@@ -32,7 +32,7 @@ gem 'rspec', '~> 3.0', group: %i[development test]
 gem 'rubocop', require: false, group: %i[development test]
 gem 'sentry-raven'
 gem 'simplecov', require: false, group: %i[development test]
-gem 'sinatra', '>= 3.0.6'
+gem 'sinatra', '>= 3.1.0'
 gem 'ssh_data'
 gem 'travis'
 gem 'travis-config', github: 'travis-ci/travis-config'
