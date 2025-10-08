@@ -7,15 +7,17 @@ GIT
 
 GIT
   remote: https://github.com/sinatra/sinatra.git
-  revision: 3fe6297a4bec04e279df7842fe50fb7526dea65a
+  revision: f2ad45f7d2456172974a30d300e9f82424336e09
   specs:
-    rack-protection (3.0.6)
-      rack
-    sinatra-contrib (3.0.6)
-      multi_json
+    rack-protection (4.2.0)
+      base64 (>= 0.1.0)
+      logger (>= 1.6.0)
+      rack (>= 3.0.0, < 4)
+    sinatra-contrib (4.2.0)
+      multi_json (>= 0.0.2)
       mustermann (~> 3.0)
-      rack-protection (= 3.0.6)
-      sinatra (= 3.0.6)
+      rack-protection (= 4.2.0)
+      sinatra (= 4.2.0)
       tilt (~> 2.0)
 
 GIT
@@ -62,6 +64,7 @@ GEM
     atomic (1.1.101)
     avl_tree (1.1.3)
     backports (3.18.1)
+    base64 (0.3.0)
     codeclimate-test-reporter (1.0.8)
       simplecov (<= 0.13)
     coder (0.4.0)
@@ -106,6 +109,7 @@ GEM
     listen (3.8.0)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
+    logger (1.7.0)
     method_source (1.0.0)
     metriks (0.9.9.6)
       atomic (~> 1.0)
@@ -118,9 +122,9 @@ GEM
     minitest (5.19.0)
     mocha (2.0.0)
     msgpack (1.7.1)
-    multi_json (1.14.1)
+    multi_json (1.17.0)
     multipart-post (2.3.0)
-    mustermann (3.0.0)
+    mustermann (3.0.4)
       ruby2_keywords (~> 0.0.1)
     net-http-persistent (4.0.2)
       connection_pool (~> 2.2)
@@ -145,10 +149,13 @@ GEM
     pusher-client (0.6.2)
       json
       websocket (~> 1.0)
-    rack (2.2.7)
+    rack (3.2.2)
+    rack-session (2.1.1)
+      base64 (>= 0.1.0)
+      rack (>= 3.0.0)
     rack-ssl (1.4.1)
       rack
-    rack-test (2.1.0)
+    rack-test (2.2.0)
       rack (>= 1.3)
     rainbow (3.1.1)
     rake (12.3.3)
@@ -200,13 +207,15 @@ GEM
       json (>= 1.8, < 3)
       simplecov-html (~> 0.10.0)
     simplecov-html (0.10.2)
-    sinatra (3.0.6)
+    sinatra (4.2.0)
+      logger (>= 1.6.0)
       mustermann (~> 3.0)
-      rack (~> 2.2, >= 2.2.4)
-      rack-protection (= 3.0.6)
+      rack (>= 3.0.0, < 4)
+      rack-protection (= 4.2.0)
+      rack-session (>= 2.0.0, < 3)
       tilt (~> 2.0)
     ssh_data (1.3.0)
-    tilt (2.2.0)
+    tilt (2.6.1)
     travis (1.8.13)
       backports
       faraday (~> 0.9)
@@ -251,9 +260,9 @@ DEPENDENCIES
   parallel_tests
   pry (>= 0.14.2)
   puma
-  rack (>= 2.2.4)
+  rack (>= 2.2.19)
   rack-ssl (~> 1.4)
-  rack-test (>= 2.1.0)
+  rack-test (>= 2.2.0)
   rake
   rbtrace
   rerun
@@ -262,7 +271,7 @@ DEPENDENCIES
   rubocop
   sentry-raven
   simplecov
-  sinatra (>= 3.0.6)
+  sinatra (>= 3.1.0)
   sinatra-contrib!
   ssh_data
   travis
@@ -273,7 +282,7 @@ DEPENDENCIES
   webmock
 
 RUBY VERSION
-   ruby 3.2.2p53
+   ruby 3.1.7p261
 
 BUNDLED WITH
-   2.3.26
+   2.3.27
