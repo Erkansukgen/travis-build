@@ -11,7 +11,7 @@ gem 'codeclimate-test-reporter', require: false, group: %i[development test]
 gem 'coder'
 gem 'connection_pool'
 gem 'ed25519'
-gem 'faraday'
+gem 'faraday', '>= 2.14.1'
 gem 'faraday_middleware'
 gem 'jwt', '~> 1.5'
 gem 'metriks', '0.9.9.6'
@@ -30,17 +30,17 @@ gem 'rbtrace'
 gem 'rerun', require: false, group: :development
 gem 'rspec', '~> 3.0', group: %i[development test]
 gem 'rubocop', require: false, group: %i[development test]
-gem 'sentry-raven'
+gem 'sentry-raven', '>= 3.0.0'
 gem 'simplecov', require: false, group: %i[development test]
 gem 'sinatra', '>= 3.0.6'
 gem 'ssh_data'
-gem 'travis'
+gem 'travis', '>= 1.12.0'
 gem 'travis-config', github: 'travis-ci/travis-config'
 gem 'travis-github_apps', github: 'travis-ci/travis-github_apps'
 gem 'travis-rollout', github: 'travis-ci/travis-rollout'
 gem 'travis-support', github: 'travis-ci/travis-support'
 
-gem "octokit", "~> 4.18"
+gem "octokit", "~> 4.23", ">= 4.23.0"
 gem 'rest-client'
 
 github 'sinatra/sinatra' do
